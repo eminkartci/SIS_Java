@@ -11,9 +11,15 @@ public class Main {
         Course c1 = new Course(1,"IE246",6,60);
         Course c2 = new Course(2,"EE350",6,65);
 
-        System.out.println(s2.toString());
-        System.out.println(c1.toString());
+        // System.out.println(s2.toString());
+        // System.out.println(c1.toString());
 
+        s1.take_course(c1);
+        s2.take_course(c1);
+
+        // s1.list_taken_courses();
+
+        c1.list_students();
     }
     
 }

@@ -7,6 +7,7 @@ public class Course {
     private int necessityCredit;
     private int maxCapacity;
     private Student[] students;
+    private int studentAmount;
 
 
     // Constructor
@@ -18,6 +19,7 @@ public class Course {
 
         // initialize array
         this.students = new Student[100];
+        this.studentAmount = 0;
     }
 
     // To String
@@ -30,6 +32,39 @@ public class Course {
                        + "| Capacity    : " + this.maxCapacity + "\n" ;
 
         return content;
+    }
+
+    public void list_students(){
+
+        System.out.println("--------------------------------");
+        System.out.println(this.name + " student list: ");
+
+        for(int i = 0 ; i < this.studentAmount ; i++ ) {
+            System.out.println(this.students[i].toString()) ;
+        }
+
+    }
+
+    public void increaseStudentNumber(){
+        this.studentAmount ++ ;
+    }
+
+    // GETTERS 
+    public String getName(){
+        return this.name;
+    }
+
+    public Student[] getStudents(){
+        return this.students;
+    }
+
+    public int getStudentAmount(){
+        return this.studentAmount;
+    }
+
+    // SETTERS
+    public void setStudentAmount(int amount){
+        this.studentAmount = amount;
     }
 
 }
