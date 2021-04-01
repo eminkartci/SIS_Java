@@ -20,4 +20,16 @@ public class Course {
         this.students = new Student[100];
     }
 
+    // To String
+    public String toString(){
+
+        String content = "--------- Course ---------"+ "\n" 
+                       + "| ID          : " + this.id   + "\n" 
+                       + "| Name        : " + this.name + "\n" 
+                       + "| Credit      : " + this.necessityCredit + "\n" 
+                       + "| Capacity    : " + this.maxCapacity + "\n" ;
+
+        return content;
+    }
+
 }
